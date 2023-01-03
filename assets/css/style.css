@@ -1,0 +1,145 @@
+body{
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.app{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.todo-list{
+  margin: 1rem 0;
+  background-color: #C7C7C7;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.title{
+  border-bottom: 1px solid rgba(246, 241, 209, 0.5);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.form-conteudo{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input, .form-button, .form-date, .button-clear{
+  font-family: 'Inter', sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #E7E7E7;
+}
+
+.form-input{
+  width: 47.5%;
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-date{
+  border: none;
+  width: 40%;
+}
+
+.form-button , .button-clear{
+  margin-top: 0.5rem;
+  border: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-clear{
+  width: 100%;
+}
+
+.form-button:hover, .button-clear:hover{
+  color: #000;
+  background: #F8E578;
+}
+
+.list{
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.task{
+  background-color: #BBB;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 1rem 3rem;
+}
+
+.check-button, .delete-button{
+  background-color: #F8E578;
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.task.done .check-button{
+  background-color: #46494C;
+  color: #F8E578;
+}
+
+.check-icon{
+  display: block;
+  padding: 1px;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.task.done .check-icon{
+  background-color: #0B2027;
+}
+
+.content{
+  margin: 0 1rem 0 0;
+  text-transform: lowercase;
+}
+
+.task.done .content{
+  text-decoration: line-through;
+}
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+@media screen and (max-width: 767px) { 
+  .todo-list{
+    margin: 0 1rem;
+  }
+  
+  .form-conteudo{
+    display: block;
+  }
+
+  .form-input, .form-date{
+    width: auto;
+  }
+
+  .form-date{
+    margin-top: 0.5rem;
+  }
+}

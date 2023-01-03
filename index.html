@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <title>Agenda</title>
+</head>
+<body>
+  <div class="app">
+    <div class="todo-list">
+      <h1 class="title">
+        Agenda
+      </h1>
+      
+      <form class="form" action="">
+        <div class="form-conteudo">
+          <input class="form-input" type="text" data-form-input maxlength="15" placeholder="Nome da Tarefa">
+          <input class="form-date" type="datetime-local" data-form-date placeholder="Data">
+        </div>
+        <button class="form-button" type="submit" data-form-button>Criar Tarefa</button>
+      </form>
+      
+      <br><span class="task show" data-list-example>Aqui aparecerão as suas tarefas</span>
+
+      <ul class="list" data-list>
+      </ul>
+      <button class="button-clear" type="submit" data-local-clear>Apagar tudo</button>
+    </div>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+    <script type="module" src="./assets/js/script.js"></script>
+  </body>
+  </html>
+  
