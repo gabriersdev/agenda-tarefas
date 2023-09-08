@@ -3,6 +3,10 @@ body{
   font-family: "Inter", sans-serif;
 }
 
+*{
+  font-family: "Inter", sans-serif;
+}
+
 .app{
   display: flex;
   align-items: center;
@@ -83,6 +87,7 @@ body{
 }
 
 .check-button, .delete-button{
+  font-family: 'Arial', sans-serif;
   background-color: #F8E578;
   border: none;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);

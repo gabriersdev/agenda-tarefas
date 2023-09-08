@@ -15,6 +15,7 @@ import { atualizarHora } from "./mod-tarefas/utilitarios.js";
 
   window.addEventListener('load', () => {
     const dataFormulario = document.querySelector('[data-form-date]');
+    // console.log(atualizarHora());
     dataFormulario.value = atualizarHora();
   });
 

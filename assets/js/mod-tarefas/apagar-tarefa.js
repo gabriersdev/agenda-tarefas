@@ -15,16 +15,32 @@ const criarBotaoApagarTarefa = (id) => {
 }
 
 const apagarTarefa = (id) => {
-  let tarefasSalvas = JSON.parse(localStorage.getItem('tarefas')) || [];
+  Swal.fire({
+    icon: 'question',
+    title: 'Tem certeza que deseja apagar a tarefa?',
+    text: 'Não será possível desfazer',
+    showCancelButton: true,
+    confirmButtonColor: 'green',
+    cancelButtonColor: 'red',
+    confirmButtonText: 'Sim',
+    cancelButtonText: 'Não'
+  }).then((ret) => {
+    if(ret.isConfirmed){
+      let tarefasSalvas = JSON.parse(localStorage.getItem('tarefas')) || [];
 
-  if(tarefasSalvas.length == 1){
-    apagarTarefasLocal();
-  }else{
-    tarefasSalvas.splice(id, 1);
-    localStorage.setItem('tarefas', JSON.stringify(tarefasSalvas));
-  }
-
-  carregarTarefas();
+      if(tarefasSalvas.length == 1){
+        apagarTarefasLocal();
+      }else{
+        tarefasSalvas.splice(id, 1);
+        localStorage.setItem('tarefas', JSON.stringify(tarefasSalvas));
+      }
+    
+      carregarTarefas();
+      // console.log('true')
+    }else{
+      // console.log('else')
+    }
+  })
 }
 
 export default criarBotaoApagarTarefa;
