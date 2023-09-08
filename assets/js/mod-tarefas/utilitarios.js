@@ -31,7 +31,7 @@ const limparCampos = ({input, calendario}) => {
 const atualizarHora = () => {
   const dataAtual = new Date();
   const diaAtual = ("0" + dataAtual.getDate()).slice(-2);
-  const mesAtual = ("0" + dataAtual.getMonth() + 1).slice(-2);
+  const mesAtual = ("0" + (dataAtual.getMonth() + 1)).slice(-2);
   const anoAtual = dataAtual.getFullYear();
   
   const horarioFormato = {
