@@ -25,7 +25,7 @@ const limparLista = (elemento) => {
 
 const limparCampos = ({input, calendario}) => {
   input.value = '';
-  calendario.value = '';
+  calendario.value = atualizarHora();
 }
 
 const atualizarHora = () => {
